@@ -4,8 +4,8 @@
  */
 
 #include <iostream>
-#include <cstdio>
 #include <vector>
+#include <cstdlib>
 
 using namespace std;
 
@@ -17,7 +17,7 @@ class reberNode{
 	public:
 		reberNode(int);
 		void connectToNodes(vector<reberNode*>, vector<char>);	// Connection requires a pair of vectors of the correct size
-		void transition();	// Method to randomly pick an edge to jump along, print it's character, then jump
+		reberNode* transition();	// Method to randomly pick an edge to jump along, print it's character, then jump
 
 };
 
@@ -48,7 +48,7 @@ void reberNode::connectToNodes(vector<reberNode*> nodePtrs, vector<char> connVal
 }
 
 reberNode* reberNode::transition(){
-	randNum = rand() % connectionNumber;
-	printf(connectionValues.at(randNum);
+	int randNum = rand() % connectionNumber;
+	cout << connectionValues.at(randNum);
 	return connections.at(randNum);
 }
