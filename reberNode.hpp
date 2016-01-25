@@ -4,6 +4,7 @@
  */
 
 #include <iostream>
+#include <cstdio>
 #include <vector>
 
 using namespace std;
@@ -15,8 +16,9 @@ class reberNode{
 
 	public:
 		reberNode(int);
-		connectToNodes(vector<reberNode*>, vector<char>);	// Connection requires a pair of vectors of the correct size
-		
+		void connectToNodes(vector<reberNode*>, vector<char>);	// Connection requires a pair of vectors of the correct size
+		void transition();	// Method to randomly pick an edge to jump along, print it's character, then jump
+
 };
 
 reberNode::reberNode(int connNumInput){
@@ -25,7 +27,7 @@ reberNode::reberNode(int connNumInput){
 	connections.resize(connectionNumber, NULL);	// Make some blank connections
 }
 
-reberNode::connectToNodes(vector<reberNode*> nodePtrs, vector<char> connValInput){
+void reberNode::connectToNodes(vector<reberNode*> nodePtrs, vector<char> connValInput){
 	connectionValues.resize(connValInput.size());
 	connectionValues = connValInput;
 	// Define some iterators:
@@ -41,6 +43,12 @@ reberNode::connectToNodes(vector<reberNode*> nodePtrs, vector<char> connValInput
 		++itNodePtrs;
 		++itChar;
 		++itConnValInput;
-	}	// At this point the thing should be all connected up
+	}	// At this point the node should be all connected up
 	
+}
+
+reberNode* reberNode::transition(){
+	randNum = rand() % connectionNumber;
+	printf(connectionValues.at(randNum);
+	return connections.at(randNum);
 }
