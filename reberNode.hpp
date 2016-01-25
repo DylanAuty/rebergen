@@ -20,6 +20,6 @@ class reberNode{
 reberNode::reberNode(int connNumInput){
 	// Set up variables, resize connectionptr vector appropriately and fill it with NULL
 	connectionNumber = connNumInput;
-	connections.resize(connectionNumber);
-	fill(connections.begin(), connections.end(), NULL);
+	connections.resize(connectionNumber, NULL);
+	//fill(connections.begin(), connections.end(), NULL);
 }
