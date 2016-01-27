@@ -6,9 +6,11 @@ A Reber grammar/embedded Reber grammar generator.
 A Reber grammar is an artificial grammar which generates a sequence of letters. The grammar works in such a way that the end characters of the grammar will depend on which characters were chosen near the start of the grammar, which can make it a good way of modelling a long range pattern.
 
 A Reber grammar looks like this:
+
 ![Reber Grammar](./ReadmeGraphics/reberGrammar.png?raw=true "The Reber Grammar")
 
 An embedded Reber Grammar looks like this:
+
 ![Embedded Reber Grammar](./ReadmeGraphics/embeddedReberGrammar.png?raw=true "The Embedded Reber Grammar")
 
 ### Why Do You Need One?
