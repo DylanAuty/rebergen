@@ -23,3 +23,8 @@ This stops the early layers from learning quickly or at all.
 
 #### How Does This Grammar Come In?
 The Reber Grammar, and its cousin the Embedded Reber Grammar, are good ways of testing the ability of a recurrent neural network to learn long-range dependencies. Traditional (i.e. the neurons are just shoving a weighted sum of inputs through an activation function) recurrent neural networks are fine with Reber grammars, but fail on embedded Reber grammars. If a recurrent neural network is purported to be able to learn long-range dependencies, the embedded Reber grammar is a good corpus generator and a good result checker.
+
+## Implementation
+This is written in C++, and is pointlessly object oriented because it's a nice learning exercise. There is extensive use of rand() 
+
+
