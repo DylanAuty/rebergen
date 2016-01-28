@@ -7,6 +7,7 @@
 #include <ctime>
 #include <cstdlib>
 #include "reberNode.hpp"
+#include "reberGrammar.hpp"
 
 void printHelp();					// Function that prints the help information
 void printReberString();			// Prints a string from a Reber Grammar, terminated by an endline character
@@ -59,7 +60,10 @@ void printHelp(){
 }
 
 void printReberString(){
-	return;
+	reberNode* currentNode = NULL;
+	reberGrammar n1(2);
+	currentNode = &n1;
+	
 }
 
 void printEmbeddedReberString(){

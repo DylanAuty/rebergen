@@ -1,18 +1,20 @@
-/** reberNode.hpp
- * Contains class declaration for a node of a Reber grammar.
+/** reberGrammar.hpp
+ * Contains class declaration for a Reber grammar.
+ * Inherits from reberNode
  * Dylan Auty, January 2016
  */
-
-#ifndef REBERNODE_H
-#define REBERNODE_H
+#ifndef REBERGRAMMAR_H
+#define REBERGRAMMAR_H
 
 #include <iostream>
 #include <vector>
 #include <cstdlib>
+#include "reberNode.hpp"
 
 using namespace std;
 
-class reberNode{
+class reberGrammar : public reberNode{
+	/*
 	int connectionNumber;
 	vector<reberNode*> connections;		// Vector of pointers to the connected node, which can include itself.
 	vector<char> connectionValues;		// Character values associated with each edge transition.
@@ -21,15 +23,22 @@ class reberNode{
 		reberNode(int);
 		void connectToNodes(vector<reberNode*>, vector<char>);	// Connection requires a pair of vectors of the correct size
 		reberNode* transition();	// Method to randomly pick an edge to jump along, print it's character, then jump
-
+	*/
+	// ^^ That lot comes free with purchase of every reberNode
+	public:
+		reberGrammar(int connNumInput);
 };
 
-reberNode::reberNode(int connNumInput){
+reberGrammar::reberGrammar(int connNumInput) : reberNode(connNumInput){
+	/*
 	// Set up variables, resize connectionptr vector appropriately and fill it with NULL
 	connectionNumber = connNumInput;
 	connections.resize(connectionNumber, NULL);	// Make some blank connections
+	*/
+	cout << "CONSTRUCTOR" << endl;
 }
 
+/*
 void reberNode::connectToNodes(vector<reberNode*> nodePtrs, vector<char> connValInput){
 	connectionValues.resize(connValInput.size());
 	connectionValues = connValInput;
@@ -55,5 +64,6 @@ reberNode* reberNode::transition(){
 	cout << connectionValues.at(randNum);
 	return connections.at(randNum);
 }
+*/
 
-#endif /* REBERNODE_H */
+#endif /* REBERGRAMMAR_H */
